@@ -1,0 +1,55 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="my-persistence" transaction-type="RESOURCE_LOCAL">
+
+        <class>org.example.performance.Passport</class>
+        <class>org.example.aggregate_functions.Employee</class>
+        <class>org.example.inheritance.table_per_hierarchy.Customer</class>
+        <class>org.example.inheritance.table_per_hierarchy.Individual</class>
+        <class>org.example.inheritance.table_per_hierarchy.LegalEntity</class>
+
+<!--        <class>org.example.inheritance.table_per_class.Customer</class>-->
+<!--        <class>org.example.inheritance.table_per_class.Individual</class>-->
+<!--        <class>org.example.inheritance.table_per_class.LegalEntity</class>-->
+
+<!--        <class>org.example.inheritance.table_per_subclass.Customer</class>-->
+<!--        <class>org.example.inheritance.table_per_subclass.Individual</class>-->
+<!--        <class>org.example.inheritance.table_per_subclass.LegalEntity</class>-->
+
+        <class>org.example.lazy_loading.School</class>
+        <class>org.example.lazy_loading.Teacher</class>
+        <class>org.example.relationships.one_to_one.entity.ChoreographerUni</class>
+        <class>org.example.relationships.one_to_one.entity.ChoreographerDetailsUni</class>
+        <class>org.example.relationships.one_to_one.entity.ChoreographerBi</class>
+        <class>org.example.relationships.one_to_one.entity.ChoreographerDetailsBi</class>
+
+        <class>org.example.relationships.many_to_one.entity.SchoolUni</class>
+        <class>org.example.relationships.many_to_one.entity.TeacherUni</class>
+        <class>org.example.relationships.many_to_one.entity.SchoolBi</class>
+        <class>org.example.relationships.many_to_one.entity.TeacherBi</class>
+
+        <class>org.example.relationships.many_to_many.entity.BookUni</class>
+        <class>org.example.relationships.many_to_many.entity.BookBi</class>
+        <class>org.example.relationships.many_to_many.entity.ReaderUni</class>
+        <class>org.example.relationships.many_to_many.entity.ReaderBi</class>
+
+        <class>org.example.transaction.BankAccount</class>
+
+        <class>org.example.caching.Product</class>
+
+        <properties>
+<!--            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />-->
+<!--            <property name="jakarta.persistence.jdbc.url"    value="jdbc:mysql://localhost:3306/hibernate" />-->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/EclipseLink" />
+            <property name="jakarta.persistence.jdbc.user" value="alinaverkholomova" />
+            <property name="jakarta.persistence.jdbc.password" value="password" />
+
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+
+
+        </properties>
+    </persistence-unit>
+</persistence>
