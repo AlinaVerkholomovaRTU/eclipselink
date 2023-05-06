@@ -1,1 +1,1 @@
-# Implementation EclipseLink
+# Implementation of EclipseLink
